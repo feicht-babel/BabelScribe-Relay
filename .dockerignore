@@ -1,0 +1,22 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+
+# VCS & local stuff
+.git/
+.gitignore
+README.md
+LICENSE
+
+# Local configs/secrets
+.env
+*.env
+credentials/
+HMAC_CLIENTS_JSON.env.txt
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

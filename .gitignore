@@ -1,0 +1,19 @@
+@'
+# Rust
+/target/
+**/*.rs.bk
+
+# Secrets & local config
+.env
+*.env
+HMAC_CLIENTS_JSON.env.txt
+/credentials/
+
+# VCS & OS junk
+.git/
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+'@ | Set-Content -NoNewline .gitignore

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: babelscribe-relay
+    env: docker
+    region: frankfurt
+    plan: starter
+    healthCheckPath: /healthz
+    envVars:
+      - key: AZURE_TRANSLATOR_KEY
+        sync: false
+      - key: AZURE_TRANSLATOR_REGION
+        value: germanywestcentral
+      - key: AZURE_TRANSLATOR_ENDPOINT
+        value: https://api.cognitive.microsofttranslator.com
+      - key: RATE_PER_MIN
+        value: "120"
+      - key: RATE_PER_DAY
+        value: "10000"
+      - key: MAX_TEXT_LEN
+        value: "8000"
+      - key: TOS_VERSION
+        value: v1-2025-10-02
+      - key: HMAC_CLIENTS_JSON
+        sync: false
